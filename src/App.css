@@ -2,23 +2,71 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+h1 {
+	font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h4 {
+  text-align: center;
 }
 
-.App-intro {
-  font-size: large;
+img {
+  size: auto;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.food-image {
+  background-image: url('coffee-food.jpg');
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+}
+
+#sign-out {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+#sign-in {
+  height: 100px;
+  width: 100%;
+}
+
+.brunch {
+  background-image: url('brunch.jpg');
+  background-size: cover;
+  width: 49.5%;
+  height: 500px;
+}
+
+.fruits {
+  background-image: url('fruits.jpg');
+  background-size: cover;
+  height: 500px;
+  width: 49.5%;
+}
+
+.steak {
+  background-image: url('steak.jpg');
+  background-size: 60%;
+  height: 1000px;
+  width: 70%;
+  float: right;
+}
+
+.group-meal {
+  background-image: url('group-meal.jpg');
+  background-size: cover;
+  height: 500px;
+  width: 48%;
+}
+
+.profile {
+  text-align: center;
 }
