@@ -23,7 +23,7 @@ class App extends Component {
   componentDidMount(){
     auth.onAuthStateChanged((currentUser) => {
       this.setState({ currentUser });
-      this.usersRef = database.ref('users');
+      this.usersRef = database.ref('/users');
 
       if (currentUser) {
         this.userRef = this.usersRef.child(currentUser.uid);
@@ -40,7 +40,7 @@ class App extends Component {
       });
     });
 
-    database.ref('/restaurants').on('value', (snapshot) =>{
+    database.ref('/restaurants/').on('value', (snapshot) =>{
       this.setState({restaurants: snapshot.val()})
     })
   }
