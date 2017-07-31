@@ -48,35 +48,34 @@ class ProfileCard extends Component {
 
   render() {
 
-    const { photoURL, displayName, imageURL, imageName, currentUser } = this.props;
+    const { photoURL, displayName, imageURL, imageName, currentUser, email } = this.props;
     const { uploadProgress } = this.state;
-
-    return (
-      <div className="row profile">
-        {
-          uploadProgress &&
-          <div>
-            <strong>Uploading</strong>: { uploadProgress }
-          </div>
-        }
-        <div className="col-sm-3">
-          <img
-          className="img-responsive"
-          src={ imageURL || photoURL }
-          alt={ displayName }
-          />
-        <div style={{marginTop: '5%'}}></div>
-        {
-         !imageName && <button className="btn btn-primary" style={{height: '35px'}}>
-            Upload an image
-            <FileInput
-              accept=".png,.gif,.jpg"
-              onChange={this.handleSubmit}
-              />
-          </button>
-        }
+      return (
+        <div className="row profile">
           {
-            imageName && <button className="btn btn-danger" onClick={this.handleFileRemoval}>Delete Image</button>
+            uploadProgress &&
+            <div>
+              <strong>Uploading</strong>: { uploadProgress }
+              </div>
+            }
+            <div className="col-sm-3">
+              <img
+                className="img-responsive"
+                src={ imageURL || photoURL }
+                alt={ displayName }
+                />
+              <div style={{marginTop: '5%'}}></div>
+              {
+                !imageName && <button className="btn btn-primary" style={{height: '35px'}}>
+                Upload an image
+                <FileInput
+                  accept=".png,.gif,.jpg"
+                  onChange={this.handleSubmit}
+                  />
+              </button>
+            }
+            {
+              imageName && <button className="btn btn-danger" onClick={this.handleFileRemoval}>Delete Image</button>
           }
         </div>
         <div className="col-6">

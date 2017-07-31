@@ -29,7 +29,8 @@ class App extends Component {
                 this.userRef = this.usersRef.child(currentUser.uid);
 
                 this.userRef.once('value').then((snapshot) => {
-                    if (snapshot.val()) return;
+                    if (snapshot.val())
+                        return;
                     const userInfo = pick(currentUser, ['displayName', 'photoURL', 'email']);
                     this.userRef.set(userInfo);
                 });
@@ -50,13 +51,19 @@ class App extends Component {
         return (
             <BrowserRouter key={Math.random()}>
                 <div className="container-fluid">
-                    <nav className="navbar navbar-light" style={{ backgroundColor: '#e3f2fd' }}>
+                    <nav className="navbar navbar-light" style={{
+                        backgroundColor: '#e3f2fd'
+                    }}>
                         <section>
-                            {currentUser && map(users, (profile, uid) => <ProfileCard key={uid} {...profile} currentUser={currentUser} uid={uid}/>)
+                            {currentUser && map(users, (profile, uid) => {
+                                if (currentUser.email === profile.email) {
+                                    return <ProfileCard key={uid} {...profile} currentUser={currentUser} uid={uid}/>
+                                }
+                            })
 }
                         </section>
                     </nav>
-                    <div className="main_wrapper">
+                    <div>
                         <Main currentUser={currentUser} restaurants={restaurants}/>
                     </div>
                 </div>
