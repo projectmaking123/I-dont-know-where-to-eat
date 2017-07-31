@@ -54,9 +54,11 @@ class App extends Component {
           <section>
             {
               currentUser &&
-              map(users, (profile, uid) =>
-                <ProfileCard key={uid} {...profile} currentUser={currentUser} uid={uid}/>
-              )
+              map(users, (profile, uid) => {
+                if(currentUser.email === profile.email) {
+                  return <ProfileCard key={uid} {...profile} currentUser={currentUser} uid={uid}/>
+                }
+              })
             }
           </section>
         </nav>
