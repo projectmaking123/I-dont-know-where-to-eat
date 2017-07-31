@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Firebase API keys
 src/firebase.js
+
+# ignoring css
+src/**/*.css
