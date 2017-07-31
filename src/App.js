@@ -60,7 +60,7 @@ class App extends Component {
                                     return <ProfileCard key={uid} {...profile} currentUser={currentUser} uid={uid}/>
                                 }
                             })
-}
+                            }
                         </section>
                     </nav>
                     <div>
