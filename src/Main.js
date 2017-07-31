@@ -12,13 +12,11 @@ class Main extends Component {
         }
 
         return (
-            <div>
-                <Switch>
-                    <Route exact path='/' render={LandingPage}/>
-                    <Route path='/eventroom' component={EventRoom}/>
-                    <Route default component={FourOhFour}/>
-                </Switch>
-            </div>
+            <Switch>
+                <Route exact path='/' render={LandingPage}/>
+                <Route path='/eventroom' component={EventRoom}/>
+                <Route default component={FourOhFour}/>
+            </Switch>
         );
     }
 }
