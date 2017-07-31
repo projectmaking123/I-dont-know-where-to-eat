@@ -21,7 +21,7 @@ img {
 }
 
 .food-image {
-  background-image: url('coffee-food.jpg');
+  background-image: url('./images/coffee-food.jpg');
   background-size: cover;
   height: 500px;
   width: 100%;
@@ -39,21 +39,21 @@ img {
 }
 
 .brunch {
-  background-image: url('brunch.jpg');
+  background-image: url('./images/brunch.jpg');
   background-size: cover;
   width: 49.5%;
   height: 500px;
 }
 
 .fruits {
-  background-image: url('fruits.jpg');
+  background-image: url('./images/fruits.jpg');
   background-size: cover;
   height: 500px;
   width: 49.5%;
 }
 
 .steak {
-  background-image: url('steak.jpg');
+  background-image: url('./images/steak.jpg');
   background-size: 60%;
   height: 1000px;
   width: 70%;
@@ -61,7 +61,7 @@ img {
 }
 
 .group-meal {
-  background-image: url('group-meal.jpg');
+  background-image: url('./images/group-meal.jpg');
   background-size: cover;
   height: 500px;
   width: 48%;
