@@ -51,9 +51,7 @@ class App extends Component {
         return (
             <BrowserRouter key={Math.random()}>
                 <div className="container-fluid">
-                    <nav className="navbar navbar-light" style={{
-                        backgroundColor: '#e3f2fd'
-                    }}>
+                    <nav className="navbar navbar-light" >
                         <section>
                             {currentUser && map(users, (profile, uid) => {
                                 if (currentUser.email === profile.email) {
