@@ -3,7 +3,7 @@ import {auth, database} from './firebase'
 import {BrowserRouter} from 'react-router-dom';
 import Main from './Main';
 import pick from 'lodash/pick';
-import './App.css';
+import './styles/App.css';
 import map from 'lodash/map';
 import ProfileCard from './ProfileCard'
 
@@ -48,7 +48,6 @@ class App extends Component {
 
     render() {
         const {currentUser, users, restaurants} = this.state
-
         return (
             <BrowserRouter key={Math.random()}>
                 <div className="container-fluid">
