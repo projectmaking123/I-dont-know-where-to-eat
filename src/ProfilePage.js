@@ -21,19 +21,16 @@ class ProfilePage extends Component {
         const {currentUser, users, restaurants} = this.state
         const FourOhFour = () => <h1>404</h1>;
         return (
-            <div>
-                <h1>Event Room</h1>
-                <section>
-                    {
-                        currentUser && map(users, (profile, uid) => {
-                            if (currentUser.email === profile.email) {
-                                return <ProfileCard key={uid} {...profile} currentUser={currentUser} uid={uid}/>
-                            } else {
-                                {FourOhFour}
-                            }
-                        })
-                    }
-                </section>
+            <div className="profile_page_wrapper img-responsive group-meal">
+                {
+                    currentUser && map(users, (profile, uid) => {
+                        if (currentUser.email === profile.email) {
+                            return <ProfileCard key={uid} {...profile} currentUser={currentUser} uid={uid}/>
+                        } else {
+                            {FourOhFour}
+                        }
+                    })
+                }
             </div>
         );
     }
