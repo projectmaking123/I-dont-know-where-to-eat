@@ -17,6 +17,7 @@ class Forecast extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleGeoMapApi = this.handleGeoMapApi.bind(this)
     this.handleInputClick = this.handleInputClick.bind(this)
+    this.sendUpProps = this.sendUpProps.bind(this)
   }
 
   handleGeoMapApi(event) {
@@ -37,7 +38,6 @@ class Forecast extends Component {
   handleForecastApi() {
     axios.get(`https://forecast-api-projectmaking123.herokuapp.com/${this.state.lat}/${this.state.lng}`)
     .then(response => {
-      console.log(response);
       this.setState({
         currentTemp: response.data.currently.apparentTemperature,
         weeklyTemp: response.data.daily.data
@@ -104,7 +104,7 @@ class Forecast extends Component {
               }
             </div>
             <button onClick={this.sendUpProps}>
-
+              hello
             </button>
           </div>
       </div>

@@ -19,11 +19,12 @@ class EventRoom extends Component {
     return (
       <div>
         <h1>Event Room</h1>
+        <h1>Hello</h1>
         <Forecast handleChildProps={this.handleChildProps}/>
         {
           currentTemp &&
           <h1>
-            currentTemp
+            {currentTemp}
           </h1>
         }
       </div>
