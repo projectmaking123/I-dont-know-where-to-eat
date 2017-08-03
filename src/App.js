@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {auth, database} from './firebase'
+import {auth, database} from './firebase';
 import {BrowserRouter} from 'react-router-dom';
 import Main from './Main';
 import pick from 'lodash/pick';
-import './App.css';
 import map from 'lodash/map';
-import ProfileCard from './ProfileCard'
+import ProfileCard from './ProfileCard';
+import './App.css';
+
 
 class App extends Component {
     constructor(props) {

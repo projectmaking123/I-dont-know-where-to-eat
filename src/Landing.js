@@ -5,6 +5,7 @@ import NewRestaurant from './NewRestaurant';
 import EventRoom from './EventRoom';
 
 class Landing extends Component {
+  
   render() {
     const { currentUser, restaurants } = this.props
     return (
