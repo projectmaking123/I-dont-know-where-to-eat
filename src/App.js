@@ -49,23 +49,18 @@ class App extends Component {
 
     render() {
         const {currentUser, users, restaurants} = this.state
+
         return (
             <BrowserRouter key={Math.random()}>
                 <div className="container-fluid">
-                    <nav className="navbar navbar-light" style={{
-                        backgroundColor: '#e3f2fd'
-                    }}>
-                        <section>
-                            {currentUser && map(users, (profile, uid) => {
-                                if (currentUser.email === profile.email) {
-                                    return <ProfileCard key={uid} {...profile} currentUser={currentUser} uid={uid}/>
-                                }
-                            })
-                            }
-                        </section>
+                    <nav className="navbar navbar-light" >
+                        <p>"this is the navbar"</p>
                     </nav>
+                    <div className="perofile-wrapper">
+
+                    </div>
                     <div>
-                        <Main currentUser={currentUser} restaurants={restaurants}/>
+                        <Main currentUser={currentUser} restaurants={restaurants} users={users}/>
                     </div>
                 </div>
             </BrowserRouter>
