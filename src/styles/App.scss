@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -14,6 +16,11 @@ h1 {
 .navbar-light {
     background-color: rgb(227, 242, 253);
 }
+.navbar {
+  margin-bottom: 0;
+  position: absolute;
+  width: 100%;
+}
 h4 {
   text-align: center;
 }
@@ -23,39 +30,39 @@ img {
 }
 
 .food-image {
-  background-image: url('./images/coffee-food.jpg');
+  background-image: url('../images/coffee-food.jpg');
   background-size: cover;
   height: 500px;
   width: 100%;
 }
 
 #sign-out {
-  height: 100px;
-  width: 100%;
+  // height: 100px;
+  // width: 100%;
   text-align: center;
 }
 
 #sign-in {
-  height: 100px;
-  width: 100%;
+  // height: 100px;
+  // width: 100%;
 }
 
 .brunch {
-  background-image: url('./images/brunch.jpg');
+  background-image: url('../images/brunch.jpg');
   background-size: cover;
   width: 49.5%;
   height: 500px;
 }
 
 .fruits {
-  background-image: url('./images/fruits.jpg');
+  background-image: url('../images/fruits.jpg');
   background-size: cover;
   height: 500px;
   width: 49.5%;
 }
 
 .steak {
-  background-image: url('./images/steak.jpg');
+  background-image: url('../images/steak.jpg');
   background-size: 60%;
   height: 1000px;
   width: 70%;
@@ -63,12 +70,13 @@ img {
 }
 
 .group-meal {
-  background-image: url('./images/group-meal.jpg');
+  background-image: url('../images/group-meal.jpg');
   background-size: cover;
-  height: 500px;
-  width: 48%;
+  height: 100vh;
+
 }
 
 .profile {
   text-align: center;
 }
+@import 'components/profilepage';
