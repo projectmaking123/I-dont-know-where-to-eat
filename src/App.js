@@ -7,7 +7,7 @@ import './styles/App.css';
 
 import map from 'lodash/map';
 import ProfileCard from './ProfileCard';
-import './App.css';
+
 
 class App extends Component {
     constructor(props) {
@@ -56,31 +56,34 @@ class App extends Component {
 
         return (
             <BrowserRouter key={Math.random()}>
-                <div className="container-fluid">
-                    <nav className="navbar navbar-light" >
+                <div className="">
+                    <nav className="navbar" >
 
-                        <button className="btn btn-primary">
+                        <button className="btn btn-primary nav_btn">
                             <a style={{
                                 color: 'white'
                             }} href="/">Home</a>
                         </button>
-                        <button className="btn btn-primary">
+                        <button className="btn btn-primary nav_btn">
                             <a style={{
                                 color: 'white'
                             }} href="/eventroom" title="Events">events</a>
                         </button>
                         {
                             currentUser
-                            ? <button className="btn btn-primary" id="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
-                            : <button className="btn btn-primary" id="sign-in" onClick={() => auth.signInWithPopup(googleAuthProvider)}>Sign In</button>
+                            ? <button className="btn btn-primary nav_btn" id="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
+                            : <button className="btn btn-primary nav_btn" id="sign-in" onClick={() => auth.signInWithPopup(googleAuthProvider)}>Sign In</button>
                         }
                     </nav>
-                    <div className="perofile-wrapper">
 
-                    </div>
                     <div>
-                        <Main currentUser={currentUser} restaurants={restaurants} users={users}/>
+                        <p>
+                            hellooooooooooo
+                        </p>
                     </div>
+                    
+                    <Main currentUser={currentUser} restaurants={restaurants} users={users}/>
+
                 </div>
             </BrowserRouter>
         );
