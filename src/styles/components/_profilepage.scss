@@ -1,6 +1,9 @@
 .profile_page_wrapper {
     width: 100%;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     .profile_page {
         width: 100%;
 
@@ -19,6 +22,7 @@
                 border: 2px solid rgba(179, 220, 255, 0.73);
 
                 .profile_image {
+                    width: 100%;
                 }
             }
         }
