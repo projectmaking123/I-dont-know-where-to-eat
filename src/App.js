@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {auth, database} from './firebase'
+import {auth, database, googleAuthProvider} from './firebase'
 import {BrowserRouter} from 'react-router-dom';
 import Main from './Main';
 import pick from 'lodash/pick';
@@ -46,13 +46,32 @@ class App extends Component {
         })
     }
 
+
+
     render() {
         const {currentUser, users, restaurants} = this.state
+
+
         return (
             <BrowserRouter key={Math.random()}>
                 <div className="container-fluid">
                     <nav className="navbar navbar-light" >
-                        <p>"this is the navbar"</p>
+
+                        <button className="btn btn-primary">
+                            <a style={{
+                                color: 'white'
+                            }} href="/">Home</a>
+                        </button>
+                        <button className="btn btn-primary">
+                            <a style={{
+                                color: 'white'
+                            }} href="/eventroom" title="Events">events</a>
+                        </button>
+                        {
+                            currentUser
+                            ? <button className="btn btn-primary" id="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
+                            : <button className="btn btn-primary" id="sign-in" onClick={() => auth.signInWithPopup(googleAuthProvider)}>Sign In</button>
+                        }
                     </nav>
                     <div className="perofile-wrapper">
 
