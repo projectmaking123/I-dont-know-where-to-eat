@@ -1,3 +1,4 @@
+$navbar_background: transparent;
 
 
 .App {
@@ -13,14 +14,9 @@ h1 {
 	line-height: 26.4px;
   text-align: center;
 }
-.navbar-light {
-    background-color: rgb(227, 242, 253);
-}
-.navbar {
-  margin-bottom: 0;
-  position: absolute;
-  width: 100%;
-}
+
+
+
 h4 {
   text-align: center;
 }
@@ -79,4 +75,6 @@ img {
 .profile {
   text-align: center;
 }
+
+@import 'components/navbar';
 @import 'components/profilepage';

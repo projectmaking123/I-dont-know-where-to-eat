@@ -1,0 +1,45 @@
+$btn_height: 34px;
+$btn_hover_yellow: rgba(255, 235, 59, 0.42);
+
+.navbar {
+  margin-bottom: 0;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $navbar_background;
+
+  .nav_btn {
+    margin: 10px;
+    height: $btn_height;
+    color: white;
+    a {
+      color: white;
+    }
+  }
+  .info_btn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    color: black;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    &:hover {
+      background-color: $btn_hover_yellow;
+    }
+  }
+  .info_instructions  {
+    position: absolute;
+    margin-top: $btn_height;
+  }
+  .show_instructions {
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .hide_instruction {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+}

@@ -61,6 +61,7 @@ class ProfileCard extends Component {
                         }
                     </div>
                     <div className="profile_image_wrapper">
+                        <h1 className="display_name">{this.props.currentUser.displayName}</h1>
                         <img className="profile_image" src={imageURL || photoURL} alt={displayName}/>
                     </div>
                     <div className="button_wrapper">
@@ -76,10 +77,6 @@ class ProfileCard extends Component {
                             </button>
                         }
                     </div>
-                </div>
-
-                <div className="current_user_info_warpper">
-                    <CurrentUser currentUser={currentUser}/>
                 </div>
             </div>
         )
